@@ -202,3 +202,75 @@ nav ul li a:hover {
     padding: 1.5rem;
     color: black;  
 }
+
+.carrusel {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #40fc27;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    padding: 50px;
+    background-color: #40fc27;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  #slide1:checked ~ #s1,
+  #slide2:checked ~ #s2,
+  #slide3:checked ~ #s3 {
+    display: block;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .controls label {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"]:checked + label {
+    background-color: #29e529;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  .name-user {
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonios h3{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin: 3rem;
+  }

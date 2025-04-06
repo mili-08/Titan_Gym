@@ -1,0 +1,32 @@
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    margin: 2rem 0;
+}
+
+.contador-container {
+    text-align: center;
+    color: #ffffff;
+}
+
+.contador-numero {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #29e529; 
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contador-container p {
+    font-size: 1.2rem;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

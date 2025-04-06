@@ -272,5 +272,9 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    margin: 3rem;
+    margin: 4rem;
+  }
+  
+  .testimonios {
+    padding-bottom: 3rem;
   }

@@ -1,145 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clases</title>
   <link rel="stylesheet" href="/public/css/clases.css" />
 </head>
+
 <body>
 
-    <section>
-        <input type="radio" id="todo" name="categoria" checked />
+  <section>
+    <input type="radio" id="todo" name="categoria" checked />
     <input type="radio" id="musculacion" name="categoria" />
     <input type="radio" id="crossfit" name="categoria" />
     <input type="radio" id="yoga" name="categoria" />
     <input type="radio" id="spinning" name="categoria" />
 
     <div class="filtros">
-        <label for="todo">Todas</label>
-        <label for="musculacion">Musculación</label>
-        <label for="crossfit">CrossFit</label>
-        <label for="yoga">Yoga</label>
-        <label for="spinning">Spinning</label>
+      <label for="todo">Todas</label>
+      <label for="musculacion">Musculación</label>
+      <label for="crossfit">CrossFit</label>
+      <label for="yoga">Yoga</label>
+      <label for="spinning">Spinning</label>
     </div>
-        
-    <div class="galeria">
-      <div class="clase musculacion">
+
+    <div class="grid-container">
+      <div class="grid-item musculacion tall">
         <img src="public/images/weightlifting.jpg" alt="Musculación">
         <div class="overlay">Lunes, Miércoles, Viernes - 18:00 hs</div>
       </div>
-    
-      <div class="clase crossfit">
+
+      <div class="grid-item spinning wide">
+        <img src="public/images/spinning.jpg" alt="Spinning">
+        <div class="overlay">Lunes y Jueves - 17:00 hs</div>
+      </div>
+
+      <div class="grid-item yoga wide">
+        <img src="public/images/yoga.jpg" alt="Yoga">
+        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
+      </div>
+
+      <div class="grid-item crossfit wide">
         <img src="public/images/crossfit.jpg" alt="CrossFit">
         <div class="overlay">Martes y Jueves - 19:00 hs</div>
       </div>
-    
-      <div class="clase yoga">
-        <img src="public/images/yoga.jpg" alt="Yoga">
-        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
-      </div>
-    
-      <div class="clase spinning">
+
+     
+      <div class="grid-item spinning wide">
         <img src="public/images/spinning.jpg" alt="Spinning">
-        <div class="overlay">Lunes - Jueves - 17:00 hs</div>
+        <div class="overlay">Martes y Viernes - 17:00 hs</div>
       </div>
 
-      <div class="clase musculacion">
+      <div class="grid-item musculacion tall">
         <img src="public/images/weightlifting.jpg" alt="Musculación">
-        <div class="overlay">Lunes, Viernes - 18:00 hs</div>
+        <div class="overlay">Lunes y Miercoles - 18:00 hs</div>
       </div>
-
-      <div class="clase spinning">
-        <img src="public/images/spinning.jpg" alt="Spinning">
-        <div class="overlay">Martes y Jueves - 17:00 hs</div>
-      </div>
-      <div class="clase yoga">
-        <img src="public/images/yoga.jpg" alt="Yoga">
-        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
-      </div>
-    
-      <div class="clase musculacion">
+      <div class="grid-item musculacion tall">
         <img src="public/images/weightlifting.jpg" alt="Musculación">
         <div class="overlay">Sábados - 10:00 hs</div>
       </div>
-      <div class="clase yoga">
+      
+      <div class="grid-item yoga wide">
         <img src="public/images/yoga.jpg" alt="Yoga">
-        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
+        <div class="overlay">Lunes y Viernes - 17:00 hs</div>
       </div>
-      <div class="clase yoga">
-        <img src="public/images/yoga.jpg" alt="Yoga">
-        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
+
+     
+      <div class="grid-item crossfit wide">
+        <img src="public/images/crossfit.jpg" alt="CrossFit">
+        <div class="overlay">Martes y Jueves - 10:00 hs</div>
       </div>
-      <div class="clase yoga">
-        <img src="public/images/yoga.jpg" alt="Yoga">
-        <div class="overlay">Lunes a Viernes - 08:00 hs</div>
+      <div class="grid-item musculacion tall">
+        <img src="public/images/weightlifting.jpg" alt="Musculación">
+        <div class="overlay">Lunes y Sábados - 19:00 hs</div>
       </div>
     </div>
-    </section>
-    <div class="tabla-horarios">
-        <h2>Horarios Semanales</h2>
-        <table>
-        <thead>
-            <tr>
-            <th>Día</th>
-            <th>08:00</th>
-            <th>10:00</th>
-            <th>17:00</th>
-            <th>18:00</th>
-            <th>19:00</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>Lunes</td>
-            <td>Yoga</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Musculación</td>
-            <td>-</td>
-            </tr>
-            <tr>
-            <td>Martes</td>
-            <td>Yoga</td>
-            <td>-</td>
-            <td>Spinning</td>
-            <td>-</td>
-            <td>CrossFit</td>
-            </tr>
-            <tr>
-            <td>Miércoles</td>
-            <td>Yoga</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Musculación</td>
-            <td>-</td>
-            </tr>
-            <tr>
-            <td>Jueves</td>
-            <td>Yoga</td>
-            <td>-</td>
-            <td>Spinning</td>
-            <td>-</td>
-            <td>CrossFit</td>
-            </tr>
-            <tr>
-            <td>Viernes</td>
-            <td>Yoga</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Musculación</td>
-            <td>-</td>
-            </tr>
-            <tr>
-            <td>Sábado</td>
-            <td>-</td>
-            <td>Musculación</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
+  </section>
+  <div class="tabla-horarios">
+    <h2>Horarios Semanales</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>08:00</th>
+          <th>10:00</th>
+          <th>17:00</th>
+          <th>18:00</th>
+          <th>19:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lunes</td>
+          <td>Yoga</td>
+          <td>-</td>
+          <td>Spinning</td>
+          <td>Musculación</td>
+          <td>Musculación</td>
+        </tr>
+        <tr>
+          <td>Martes</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+          <td>Spinning</td>
+          <td>-</td>
+          <td>CrossFit</td>
+        </tr>
+        <tr>
+          <td>Miércoles</td>
+          <td>Yoga</td>
+          <td>-</td>
+          <td>-</td>
+          <td>Musculación</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Jueves</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+          <td>Spinning</td>
+          <td>-</td>
+          <td>CrossFit</td>
+        </tr>
+        <tr>
+          <td>Viernes</td>
+          <td>Yoga</td>
+          <td>Yoga</td>
+          <td>Spinning</td>
+          <td>Musculación</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Sábado</td>
+          <td>-</td>
+          <td>Musculación</td>
+          <td>-</td>
+          <td>-</td>
+          <td>Musculación</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
+
 </html>

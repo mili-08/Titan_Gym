@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto Avanzado</title>
+  <link rel="stylesheet" href="/public/css/contacto.css">
+</head>
+<body>
+  <section class="container">
+    <div class="container-contacto">
+      <h1 class="titulo-verde">¡Contactate con nosotros!</h1>
+      <p class="invitation">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required minlength="3" placeholder="Milagro Martinez" />
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required  placeholder="user@gmail.com"/>
+          </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" pattern="[0-9]{10,15}" placeholder="Ej: 3811234567" />
+          </div>
+          <div class="form-group">
+            <label>Motivo:</label>
+            <select name="motivo" required>
+              <option value="" disabled selected>Seleccione un motivo</option>
+              <option value="consulta">Consulta</option>
+              <option value="soporte">Soporte</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mensaje:</label>
+          <textarea name="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+      
+        <div class="form-group button-contact">
+          <div class="spinner" id="spinner"></div>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>      
+    </div>
+  </section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>¡Formulario enviado con éxito!</h3>
+    <p>Gracias por contactarnos.</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const spinner = document.getElementById('spinner');
+  const modal = document.getElementById('modal');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    spinner.style.display = 'block';
+
+    setTimeout(() => {
+      spinner.style.display = 'none';
+      modal.style.display = 'flex';
+      form.reset();
+    }, 2000); 
+  });
+
+  function cerrarModal() {
+    modal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f3f3;
+}
+
+.card {
+  width: 220px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-front {
+  background-color: #333;
+  color: white;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+
+.card-front h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.card-back {
+  background-color: #000000;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.card-back h3 {
+  font-size: 1rem;
+}
+
+.skills {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.bar-container {
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.bar {
+  height: 8px;
+  width: 0;
+  background: linear-gradient(90deg, #4CAF50, #81C784);
+}
+
+.card:hover .bar {
+  animation: fillBar 2s forwards;
+}
+
+
+@keyframes fillBar {
+  to {
+    width: var(--level);
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 1rem;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  background: #ccc;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+}
+
+.star.filled {
+  background: gold;
+}
+
+@keyframes fadeInStar {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stars .star {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.card:hover .stars .star {
+  animation: fadeInStar 0.4s ease-out forwards;
+}
+
+.card:hover .stars .star:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:hover .stars .star:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:hover .stars .star:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card:hover .stars .star:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.card:hover .stars .star:nth-child(5) {
+  animation-delay: 1s;
+}

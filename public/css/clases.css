@@ -24,7 +24,6 @@ h1 {
 .filtros label {
     padding: 10px 20px;
     background-color: #29e529;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -39,24 +38,31 @@ h1 {
 }
 
 .tabla-horarios table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #454141;
 }
 
 .tabla-horarios th,
 .tabla-horarios td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #000000; 
+  padding: 10px;
+  text-align: center;
 }
 
 .tabla-horarios th {
     background-color: #29e529;
-    color: white;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 
 .tabla-horarios td {
     background-color: #f9f9f9;
+}
+.tabla-horarios td:first-child {
+  font-weight: bold;
+  color: #000000;      
+  background-color: #29e529;
 }
 
 input[type="radio"] {
@@ -88,7 +94,7 @@ input[type="radio"] {
     color: white;
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-align: center;
   }
   
@@ -115,6 +121,11 @@ input[type="radio"] {
   .tall {
     grid-row: span 2;
   }
+
+  .grid-wrapper {
+    width: 80vw; 
+    margin: 0 auto; 
+}
   
   .grid-item:hover .overlay {
     transform: translateY(0);
@@ -139,3 +150,4 @@ input[type="radio"] {
   #spinning:checked~.grid-container .grid-item:not(.spinning) {
     display: none;
   }
+  

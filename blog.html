@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Fitness</title>
+  <link rel="stylesheet" href="/public/css/blog.css" />
+</head>
+<body>
+
+  <!-- CATEGORÍAS -->
+  <input type="radio" name="categoria" id="cat-all" checked hidden>
+  <input type="radio" name="categoria" id="cat-cardio" hidden>
+  <input type="radio" name="categoria" id="cat-fuerza" hidden>
+  <input type="radio" name="categoria" id="cat-nutricion" hidden>
+
+  <!-- TAGS -->
+  <input type="checkbox" id="tag-hiit" hidden>
+  <input type="checkbox" id="tag-pesas" hidden>
+  <input type="checkbox" id="tag-running" hidden>
+  <input type="checkbox" id="tag-calistenia" hidden>
+
+  <div class="grid-container">
+   
+    <aside class="filtros">
+      <h3>Categorías</h3>
+      <div class="opciones">
+        <label for="cat-all" class="cat-label" data-letra="✔">Todos</label>
+        <label for="cat-cardio" class="cat-label" data-letra="C">Cardio</label>
+        <label for="cat-fuerza" class="cat-label" data-letra="F">Fuerza</label>
+        <label for="cat-nutricion" class="cat-label" data-letra="N">Nutrición</label>
+      </div>
+
+      <h3>Tags</h3>
+      <div class="opciones">
+        <label for="tag-hiit" class="tag-label" data-letra="H">HIIT</label>
+        <label for="tag-pesas" class="tag-label" data-letra="P">Pesas</label>
+        <label for="tag-running" class="tag-label" data-letra="R">Running</label>
+        <label for="tag-calistenia" class="tag-label" data-letra="L">Calistenia</label>
+      </div>
+    </aside>
+
+    <main class="posts">
+      <article class="post cardio running">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/plan-entrenamiento-empezar-correr-desde-cero-1588155878.jpg" alt="Running">
+        <h2>Running para Principiantes</h2>
+        <p>Consejos útiles para empezar a correr.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>¡Muy útil! Empecé esta semana y me sentí súper motivado.</p>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post nutricion">
+        <img src="https://www.bupasalud.com/sites/default/files/inline-images/bupa_598072389.jpg" alt="Nutrición">
+        <h2>¿Qué comer antes y después de entrenar?</h2>
+        <p>Descubrí cómo alimentar tu cuerpo correctamente para mejorar tu rendimiento y recuperación.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>Siempre me costó organizar mis comidas, esto me sirvió un montón.</p>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post cardio hiit">
+        <img src="https://img.freepik.com/foto-gratis/grupo-personas-haciendo-ejercicio-juntos-al-aire-libre_23-2151061442.jpg" alt="HIIT">
+        <h2>HIIT de 20 Minutos</h2>
+        <p>Entrená de forma intensa y eficiente.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>¡Lo probé y terminé sudando como nunca!</p>
+          </div>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>Perfecto para cuando no tenés mucho tiempo.</p>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post fuerza calistenia">
+        <img src="https://www.pipol.news/content/images/2024/10/calistenia-formativa.jpg" alt="Calistenia">
+        <h2>Fuerza con Calistenia</h2>
+        <p>Ejercicios para aumentar tu fuerza usando tu cuerpo.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>Lo empecé hace un mes y ya noto cambios. Muy recomendable.</p>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post fuerza crossfit">
+        <img src="https://canalsalud.imq.es/hubfs/Imported_Blog_Media/crossfit-entrenamiento-1.jpg" alt="CrossFit">
+        <h2>¿Qué es el CrossFit?</h2>
+        <p>Te explicamos de qué se trata esta disciplina, por qué es tan popular y cómo empezar.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>¡Lo necesitaba! Me daba miedo empezar sin saber nada.</p>
+          </div>
+        </div>
+      </article>
+    
+      <article class="post yoga meditacion">
+        <img src="https://blog.rosen.cl/hubfs/iStock-1294484082%20%281%29.jpg" alt="Meditación">
+        <h2>Cómo empezar a meditar</h2>
+        <p>No hace falta ser experto: aprendé a meditar desde cero con pasos simples.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>¡Excelente guía para principiantes como yo!</p>
+          </div>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>Me ayudó a dormir mejor y estar más tranquilo.</p>
+          </div>
+        </div>
+      </article>
+      <article class="post nutricion">
+        <img src="https://i.blogs.es/fb81ea/proteinas3/1366_2000.jpg" alt="Proteínas vegetales">
+        <h2>Proteínas sin carne</h2>
+        <p>Ideas de alimentos ricos en proteínas para una dieta equilibrada sin depender de la carne.</p>
+        <div class="comentarios">
+          <h4>Comentarios</h4>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>Justo lo que buscaba para mi dieta vegana. ¡Gracias!</p>
+          </div>
+          <div class="comentario">
+            <div class="avatar"></div>
+            <p>No sabía que había tantas opciones sin carne.</p>
+          </div>
+        </div>
+      </article>
+    </main>
+    
+  </div>
+</body>
+</html>

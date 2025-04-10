@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.filtros {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+  align-self: start;
+}
+
+.filtros:hover {
+  box-shadow: 0 6px 16px rgb(50 217 86 / 84%);
+}
+
+.filtros h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.filtros label {
+  padding: 0.3rem;
+  transition: all 0.3s;
+}
+
+
+#cat-all:checked ~ .grid-container label[for="cat-all"],
+#cat-cardio:checked ~ .grid-container label[for="cat-cardio"],
+#cat-fuerza:checked ~ .grid-container label[for="cat-fuerza"], 
+#cat-nutricion:checked ~ .grid-container label[for="cat-nutricion"] {
+  color: red;
+}
+
+
+#tag-hiit:checked ~ .grid-container label[for="tag-hiit"],
+#tag-pesas:checked ~ .grid-container label[for="tag-pesas"],
+#tag-running:checked ~ .grid-container label[for="tag-running"],
+#tag-calistenia:checked ~ .grid-container label[for="tag-calistenia"] {
+  color: red;
+}
+
+
+.post {
+  display: none;
+  background: white;
+  padding: 1rem;
+  border-left: 5px solid #ff6347;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  max-width: 350px;
+}
+
+
+#cat-all:checked ~ .grid-container .post {
+  display: block;
+}
+#cat-cardio:checked ~ .grid-container .post.cardio,
+#cat-fuerza:checked ~ .grid-container .post.fuerza, 
+#cat-nutricion:checked ~ .grid-container .post.nutricion {
+  display: block;
+}
+
+
+#tag-hiit:checked ~ .grid-container .post.hiit,
+#tag-pesas:checked ~ .grid-container .post.pesas,
+#tag-running:checked ~ .grid-container .post.running,
+#tag-calistenia:checked ~ .grid-container .post.calistenia {
+  display: block;
+}
+
+
+.comentarios {
+  margin-top: 1rem;
+  background: #f2f2f2;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h4 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.comentario {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  position: relative;
+  width: 35px;       
+  height: 35px;        
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 12px;        
+  height: 12px;      
+  background: white;
+  border-radius: 50%;
+}
+
+.avatar::after {
+  content: "";
+  position: absolute;
+  top: 18px;          
+  left: 4px;           
+  width: 26px;       
+  height: 10px;        
+  background: white;
+  border-radius: 50% / 40%;
+}
+
+
+.comentario p {
+  background: white;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.post {
+  opacity: 0;
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  transition: transform 0.3s ease;
+}
+
+
+.post:hover {
+  transform: scale(1.03);
+  z-index: 1;
+}
+

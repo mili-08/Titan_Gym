@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/home.css">
-    <link rel="stylesheet" href="/public/css/contador.css">
-    <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <title>Titan Gym</title>
@@ -17,14 +15,31 @@
             <img src="public/images/Titan_Logo.png" alt="Titan Gym Logo">
            </a> 
         </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <i class="fas fa-bars"></i>
+        </label>
         <nav>
-            <ul>
-                <li><a href="clases.html"><i class="fas fa-dumbbell"></i> Clases</a></li>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li class="dropdown">
+                    <a href="clases.html"><i class="fas fa-dumbbell"></i> Clases</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="clases.html">Yoga</a></li>
+                        <li><a href="clases.html">Weightlifting</a></li>
+                        <li><a href="clases.html">CrossFit</a></li>
+                        <li><a href="clases.html">Spinning</a></li>
+                    </ul>
+                  </li>
                 <li><a href="entrenador.html"><i class="fas fa-user"></i> Instructores</a></li>
                 <li><a href="precios.html"><i class="fas fa-dollar-sign"></i> Precios</a></li>
                 <li><a href="contactO.html"><i class="fas fa-envelope"></i> Contactos</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
             </ul>
         </nav>
+        <button class="dark-mode-toggle" aria-label="Modo Oscuro">
+            <i class="fas fa-moon"></i> 
+        </button>
     </header>
     <section id="hero">
         <video autoplay muted loop>
@@ -78,7 +93,7 @@
         </div>
     </section>
     <section class="testimonios">
-        <h3>Experiencias con <span class="highlight">Titan Gym</span></h3>
+        <h3>Experiencias con <span class="text-lila">Titan Gym</span></h3>
         <div class="carrusel">
           
           <input type="radio" name="slide" id="slide1" checked>
@@ -134,5 +149,6 @@
         <p>&copy; 2025 Titan Gym. Todos los derechos reservados.</p>
     </footer>
     <script src="public/js/contador.js"></script>
+    <script src="public/js/dark-mood.js"></script>
 </body>
 </html>

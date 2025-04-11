@@ -1,0 +1,197 @@
+#precios .container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 7rem 2rem;
+}
+
+#precios h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-h1);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#precios h1:hover {
+  color: #16a34a;
+}
+
+#precios .sub-precios {
+  font-size: 1.2rem;
+  color: var(--body-text);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#precios .sub-precios:hover {
+  color: #555;
+}
+
+#precios #toggleAnual {
+  display: none;
+}
+
+#precios .toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+#precios label[for="toggleAnual"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#precios label[for="toggleAnual"]:hover {
+  background-color: #0056b3;
+}
+
+#precios label .anual {
+  display: none;
+}
+
+#precios #toggleAnual:checked + .toggle label {
+  background-color: #16a34a;
+}
+
+#precios #toggleAnual:checked + .toggle label .mes {
+  display: none;
+}
+#precios #toggleAnual:checked + .toggle label .anual {
+  display: inline;
+}
+
+#precios .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+#precios .card {
+  background-color: #e8f5e9;
+  width: 280px;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 3px solid #22c55e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+#precios .etiqueta {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #ffc107;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  z-index: 1;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+#precios .card.premium {
+  position: relative;
+}
+
+#precios .card:hover {
+  transform: translateY(-4px);
+  border-bottom: 6px solid #22c55e;
+}
+
+#precios .plan-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#precios .price-monthly,
+#precios .price-annual {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#precios .price-annual {
+  display: none;
+}
+
+#precios #toggleAnual:checked ~ .cards .price-monthly {
+  display: none;
+}
+#precios #toggleAnual:checked ~ .cards .price-annual {
+  display: block;
+}
+
+#precios .beneficios {
+  margin-top: 1rem;
+}
+
+#precios .beneficios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#precios .beneficios li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+#precios .btn-inscribirse {
+  margin-top: 1.5rem;
+  padding: 10px;
+  background-color: var(--header-bg);
+  border: none;
+  border-radius: 10px;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+#precios .btn-inscribirse:hover {
+  box-shadow: 0 8px 16px var(--header-bg);
+}
+
+@media (max-width: 768px) {
+  #precios .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
